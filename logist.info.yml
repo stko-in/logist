@@ -1,0 +1,13 @@
+name: Logist
+type: theme
+description: 'This custom theme be working on grid.'
+core: 8.x
+base theme: false
+
+# Libraries
+libraries:
+  - logist/global-styling
+  - logist/global-scripts
+
+# Regions
+regions:
