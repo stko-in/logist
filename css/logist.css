@@ -1,5 +1,7 @@
 h1 {
-  color: red;
-  text-align: center; }
+  color: green;
+  text-align: left;
+  text-size: 20px;
+  text-transform: capitalize; }
 
 /*# sourceMappingURL=logist.css.map */
