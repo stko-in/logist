@@ -1,0 +1,22 @@
+{
+  "name": "logist",
+  "version": "1.0.0",
+  "description": "custom theme for site logist",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stko-in/logist.git"
+  },
+  "author": "inman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stko-in/logist/issues"
+  },
+  "homepage": "https://github.com/stko-in/logist#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
