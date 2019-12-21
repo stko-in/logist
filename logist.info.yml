@@ -11,3 +11,7 @@ libraries:
 
 # Regions
 regions:
+  header: Header
+  help: Help
+  content: Content
+  footer: Footer
