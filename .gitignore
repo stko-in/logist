@@ -15,3 +15,4 @@
 # Ignore custom folder and files
 /node_modules
 /sftp-config.json
+/css/logist.css.map
