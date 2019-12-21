@@ -18,7 +18,7 @@ function logist(done) {
 // BrowserSync
 function sync(done) {
   browserSync.init({
-    proxy: "http://site/"
+    proxy: "http://site"
   });
   	gulp.watch('scss/**/*.scss', logist);
   	gulp.watch('templates/**/*.twig').on('change', browserSync.reload);
