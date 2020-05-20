@@ -3,4 +3,28 @@
 /**
  * @file
  * Functions to support theming in the Logist theme.
+ * Цей файл містить hook препроцеси, які вносять зміни до теми.
+ * Цей файл виконує ту ж роль, що й template.php у Drupal 7.
  */
+
+/**
+ * Используем для модуля!!! hook_page_attachments().
+ *
+ * Это новый хук Drupal 8, как раз для целей, когда надо подцепить библиотеку
+ * на определенных или всех страницах, а может и для каких-то определенных
+ * ролей и т.д.
+ */
+function logist_page_attachments(array &$attachments) {
+  // Первый helloworld - название модуля, а второй - название либы из yml файла.
+  // $attachments['#attached']['library'][] = 'logist/global-styling';
+}
+
+/**
+ * Preprocess function for page.twig.html.
+ * Чтобы добавить библиотеку только на определённую страницу/страницы, можно воспользоваться препроцессом
+ */
+function logist_preprocess_page(&$vars) {
+  // if ($vars['is_front']) {
+    // $vars['#attached']['library'][] = 'core/drupal.ajax';
+  // }
+}

@@ -1,14 +1,60 @@
+#читабельне для людей (human-readable) ім’я теми, яке буде відображатися у списку тем на сторінці Appearance
 name: Logist
+#тип розширення, для тем завжди буде мати значення “theme”
 type: theme
+#назва групи, у яку згруповуватимуться теми з таким значення цього ключа
+package: Custom
+#опис, який буде так само висвітлюватися на сторінці Appearance
 description: 'This custom theme be working on grid.'
+#screenshot - картинка (може бути скріншот), який відображатиметься на сторінці Appearance.
+#Якщо не задати цього ключа, тоді Drupal шукатиме файл з іменем “screenshot.png” у папці з темою, щоб відобразити
+screenshot: logist_screen.png
+#версія Друпала, з якою наша тема сумісна
 core: 8.x
+#базова (батьківська) тема для даної, якщо ми створюємо підтему
 base theme: false
+
+
+#бібліотеки, які містять css і js файли, які будуть додаватися до усіх сторінок:
+#libraries:
+#- my_theme/globalstyling
+#Якщо коротко, то до теми додається додається ще один файл типу my_theme.libraries.yml, а в ньому прописується щось на зразок цього:
+#globalstyling:
+#version: 1.x
+#css:
+#theme:
+#css/style.css: {}
+#css/print.css: { media: print }
+
 
 # Libraries
 libraries:
   - logist/global-styling
   - logist/global-scripts
 
+#stylesheets-remove - видаляє посилання на css, додане іншою темою чи модулем.
+#Тут потрібно вказувати повний шлях від директорії сайту. Можна також використати токен, позначений символом @
+# Stylesheets remove
+stylesheets-remove:
+- '@classy/css/layout.css'
+- core/assets/vendor/normalize-css/normalize.css
+- core/modules/contextual/css/contextual.module.css
+
+# перезаписываем, только вместо false скорее всего нужно вставить свой файл
+# libraries-override:
+#   contextual/drupal.contextual-links:
+#     css:
+#       component:
+#         /core/themes/stable/css/contextual/contextual.module.css: false
+
+
+# Список CSS файлов, которые необходимо добавить к фрейму CKEdtior.(стиль в редакторе шрифта)
+#ckeditor_stylesheets:
+#  config.extraPlugins = 'stylescombo';
+#   - https://fonts.googleapis.com/css?family=Open+Sans
+#   - css/base/elements.css
+
+#regions - регіони теми.
 # Regions
 regions:
   header: Header

@@ -18,11 +18,11 @@ function logist(done) {
 // BrowserSync
 function sync(done) {
   browserSync.init({
-    proxy: "http://site"
+    proxy: "http://des.inman.com.ua/"
   });
     gulp.watch('scss/**/*.scss', logist);
     gulp.watch('templates/**/*.twig').on('change', browserSync.reload);
-    gulp.watch('css/**/*.css').on('change', browserSync.reload);
+    // gulp.watch('css/**/*.css').on('change', browserSync.reload);
   done();
 }
 
